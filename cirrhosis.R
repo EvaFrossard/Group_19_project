@@ -1,6 +1,7 @@
 library("tidyverse")
 
-cirrhosis_data <- read_csv(file = "~/projects/cirrhosis/data/PONE-D-18-29048R1_data_file.csv")
+cirrhosis_data <- read_csv(file = "~/projects/Group_19_project/data/PONE-D-18-29048R1_data_file.csv",
+                           na = c("_", "NA", "NOT AVAILABLE", " "))
 cirrhosis_data
 
 cirrhosis_data1 <- subset(cirrhosis_data, select = -c(Race,
@@ -55,6 +56,6 @@ cirrhosis_data1 <- subset(cirrhosis_data, select = -c(Race,
                                                       UGIB_primary_liver_dx,
                                                       `NACSELD_ACLF_D1  Yes=1 0=No`
                                                       )
-)
-cirrhosis_data1
-
+)|>
+  mutate(Age = `Age(Decade)atadmission` * 10) |>
+  filter(Sex == "Female" | Sex == "Male" )
