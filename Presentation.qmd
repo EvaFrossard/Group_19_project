@@ -1,0 +1,21 @@
+---
+title: "cirrhosis_presentation"
+author: "Eva Frossard<br>Pauline Charpentier<br>Noy Tabul<br>Fabian Ziegler"
+output:
+  quarto::reveal:
+    incremental: true
+---
+
+## Introduction
+
+------------------------------------------------------------------------
+
+## Materials and Methods
+
+------------------------------------------------------------------------
+
+## Results
+
+------------------------------------------------------------------------
+
+## Discussion
